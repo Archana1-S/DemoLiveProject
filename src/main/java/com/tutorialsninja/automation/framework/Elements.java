@@ -142,7 +142,7 @@ public class Elements {
 		select.deselectByValue(value);
 	}
 	
-	public void click(WebElement element){
+	public void click(final WebElement element){
 		Waits.waitUntil(() ->isDisplayed(element));
 		element.click();
 	}
