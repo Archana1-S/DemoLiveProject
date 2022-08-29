@@ -37,6 +37,7 @@ public class RegisterPage {
 	@FindBy(name="agree")
 	public static WebElement privacyPolicy;
 	
+	//comment
 	
 	
 	@FindBy(css="input[type='submit'][value='Continue']")
