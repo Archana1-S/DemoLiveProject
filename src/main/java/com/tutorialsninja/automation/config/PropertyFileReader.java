@@ -1,11 +1,11 @@
 package com.tutorialsninja.automation.config;
 
 
+import java.io.FileInputStream;
+
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
-
-import com.tutorialsninja.automation.util.PathHelper;
-
 
 
 public class PropertyFileReader implements ConfigurationReader{
@@ -15,7 +15,8 @@ public class PropertyFileReader implements ConfigurationReader{
 	public PropertyFileReader() {
 		properties=new Properties();
 		try {
-			properties.load(PathHelper.getInputStreamResourcePath("/src/main/resources/ConfigurationFile/config.properties"));
+			InputStream input= new FileInputStream("D:\\GitHubRepos\\DemoLiveProject\\src\\main\\resources\\ConfigurationFile\\config.properties");
+			properties.load(input);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

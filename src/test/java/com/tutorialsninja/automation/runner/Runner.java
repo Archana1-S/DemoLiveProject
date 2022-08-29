@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features="classpath:FeatureFiles/Registration.feature",
 glue="classpath:com.tutorialsninja.automation.stepdef",
 //plugin="html:target/cucumber_html_report",
-tags="@Register"
+tags="@two"
 )
 public class Runner {
 

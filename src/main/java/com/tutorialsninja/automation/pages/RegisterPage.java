@@ -37,8 +37,23 @@ public class RegisterPage {
 	@FindBy(name="agree")
 	public static WebElement privacyPolicy;
 	
-	//comment
+	@FindBy(css="input[id=\"input-firstname\"]+div")
+	public static WebElement FirstNameWarningMsg;
 	
+	@FindBy(css="input[id=\"input-lastname\"]+div")
+	public static WebElement LastNameWarningMsg;
+	
+	@FindBy(css="input[id=\"input-email\"]+div")
+	public static WebElement EmailWarningMsg;
+	
+	@FindBy(css="input[id=\"input-telephone\"]+div")
+	public static WebElement TelephoneWarningMsg;
+	
+	@FindBy(css="input[id=\"input-password\"]+div")
+	public static WebElement passwordWarningMsg;
+	
+	@FindBy(css="div[class $=\"alert-dismissible\"]")
+	public static WebElement MainWarningMsg;
 	
 	@FindBy(css="input[type='submit'][value='Continue']")
 	public static WebElement ContinueBtn;

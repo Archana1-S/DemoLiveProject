@@ -57,7 +57,27 @@ public class Registration {
 	public void i_should_see_that_user_account_has_successfully_created()  {
 		Assert.assertTrue(Elements.isDisplayed(AccountSuccessPage.SuccesLink));
 	}
+	
+	
+	@Then("I should see that user Account has not created")
+	public void i_should_see_that_user_account_has_not_created() {
+		
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.FirstNameWarningMsg));
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.LastNameWarningMsg));
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.EmailWarningMsg));
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.TelephoneWarningMsg));
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.passwordWarningMsg));
+
+	    
+	}
 
 
+
+	@And("I should see the Error message informing user to fill the mandatory fields")
+	public void i_should_see_the_error_message_informing_user_to_fill_the_mandatory_fields() {
+		
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.MainWarningMsg));
+	    
+	}
 
 }
