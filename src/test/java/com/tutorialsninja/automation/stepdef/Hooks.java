@@ -36,14 +36,14 @@ private static Logger log = Logger.getLogger(Hooks.class);
 		Browser.startBrowser();
 		Browser.maximize();
 	}
-	//@After
+	@After
 	public void closeBrowser(Scenario scenario){
-	/*if(scenario.isFailed()){
+	if(scenario.isFailed()){
 	//scenario.embed(Browser.takeScreenshot(), "image/png");
 		scenario.attach(Browser.takeScreenshot(), "image/png", null);
 	}
 	log.info("Scenario Completed: "+scenario.getName());
-	log.info("Scenario Status is: "+scenario.getStatus());*/
+	log.info("Scenario Status is: "+scenario.getStatus());
 	Base.driver.quit();
 	}
 

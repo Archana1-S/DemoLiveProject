@@ -17,6 +17,8 @@ public class HeaderSection {
     @FindBy(linkText="Register")
 	public static WebElement RegisterLink;
 	
-    
+    @FindBy(linkText="Login")
+    public static WebElement LoginLink;
+
     
 }
